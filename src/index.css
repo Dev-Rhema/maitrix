@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+body {
+  background-image: url(../src/assets/img/glitch-bg.gif);
+  background-position: center;
+  background-size: cover;
+  min-height: 100vh;
+  position: relative;
+  color: white;
+  font-family: "MatrixSans", sans-serif;
+}
+
+:root {
+  --dark-green: #02460a;
+  --light-green: #00f61d;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7); /* Black overlay with 0.4 opacity */
+  z-index: -1;
+  pointer-events: none;
+}
+
+@font-face {
+  font-family: "MatrixSans";
+  src: url("./assets/fonts/MatrixSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.word-spacing-tight {
+  word-spacing: -0.3em;
+}
